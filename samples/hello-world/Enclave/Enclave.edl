@@ -1,0 +1,8 @@
+enclave {
+	trusted {
+		public int print_name([in, out, size=capacity]char *buffer, size_t capacity);
+	};
+	untrusted {
+	    void println([in, string]const char *msg);
+	};
+};
