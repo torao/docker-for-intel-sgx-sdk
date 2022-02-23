@@ -126,3 +126,10 @@ App/%.o: App/%.c
 $(APP_NAME): App/Enclave_u.o $(APP_OBJ)
 	@$(CC) $^ -o $@ $(APP_LFLAGS)
 	@echo "LINK =>  $@"
+
+# ==== clean ====
+
+clean:
+	@rm -f $(ENCLAVE_NAME) $(SIGNED_ENCLAVE_NAME) $(APP_NAME) \
+		Enclave/Enclave_t.h Enclave/Enclave_t.c Enclave/Enclave_t.o $(ENCLAVE_OBJ) \
+		App/Enclave_u.h App/Enclave_u.c App/Enclave_u.o $(APP_OBJ)
