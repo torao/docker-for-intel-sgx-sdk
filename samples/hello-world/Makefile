@@ -59,7 +59,7 @@ ifeq ($(HW_RELEASE), 1)
 	@echo "To sign the enclave use the command:"
 	@echo "   $(SGX_ENCLAVE_SIGNER) sign -key <your key> -enclave $(ENCLAVE_NAME) -out <$(SIGNED_ENCLAVE_NAME)> -config $(ENCLAVE_CONFIG_FILE)"
 	@echo "You can also sign the enclave using an external signing tool. See User's Guide for more details."
-	@echo "To build the project in simulation mode set SGX_MODE=SIM. To build the project in prerelease mode set SGX_PRERELEASE=1 and SGX_MODE=HW."
+	@echo "To build the project in simulation mode set SGX_MODE=SIM. To build the project in release mode set SGX_MODE=HW."
 endif
 
 run: all
